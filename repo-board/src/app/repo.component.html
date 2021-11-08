@@ -2,7 +2,9 @@
     <div class="header">
         <span class="ms-Icons"><span aria-hidden="true" class="ms-Icon--GitLogo"></span></span>
         <a class="title" [href]="gitRepository.webUrl" target="_top">{{gitRepository.name}}</a>
-        <span class="badge">{{gitRepository.defaultBranch.replace('refs/heads/', '')}}</span>
+        <span class="badge">
+            <span>{{gitRepository.defaultBranch.replace('refs/heads/', '')}}</span>
+        </span>
 
         <div class="fav" *ngIf="StorageHelper.isLocalStorageAvailable()">
             <ng-container *ngIf="isFavorite(gitRepository.id); then removeFavorite; else addFavorite"></ng-container>
@@ -48,15 +50,17 @@
             </div>
             <div>
                 <span>{{pr.sourceRefName.replace('refs/heads/', '')}} into {{pr.targetRefName?.replace('refs/heads/', '')}}</span>
-                <ng-container *ngIf="getStatus(pr.status) as status">
-                    <span class="badge">{{status}}</span>
+                <ng-container *ngIf="pr.status">
+                    <span class="badge">
+                        <span>{{pr.status | prStatus}}</span>
+                    </span>
                 </ng-container>
             </div>
             <div>
                 <span *ngFor="let reviewer of pr.reviewers">
                     <!-- Avatar? -->
                     <!-- <img class="vss-Persona-content using-image" src="{{reviewer._links.avatar.href ?? 'https://cdn.vsassets.io/v/M194_20211029.7/_content/notassigned-user.svg'}}"> -->
-                    <span class="ms-Icons {{reviewer.vote | vote}}"></span><span>{{reviewer.displayName}}</span> &nbsp;
+                    <span class="ms-Icons {{reviewer.vote | vote}}" [title]="reviewer.vote | vote : 'title'"></span><span>{{reviewer.displayName}}</span> &nbsp;
                 </span>
             </div>
         </div>

@@ -1,191 +1,201 @@
-@font-face {
-    font-style: normal;
-    font-weight: 400;
-    font-family: "AzureDevOpsMDL2Assets";
-    src: url("../assets/AzDevMDL2.woff") format('woff');
-}
-
-a {
-    color: rgb(var(--palette-primary-shade-10, 0, 90, 158));
-}
-
-.ms-Icons {
-    font-family: "AzureDevOpsMDL2Assets";
-    -webkit-font-smoothing: antialiased;
-    margin-right: 3px;
-    top: 2px;
-    position: relative;
-}
-
-.ms-Icon--Branch:before {
-    content: "\ebc2 ";
-}
-
-.ms-Icon--FavoriteStar:before {
-    content: "\e734 ";
-}
-
-.ms-Icon--FavoriteStarFill:before {
-    content: "\e735 ";
-}
-
-.ms-Icon--GitLogo:before {
-    content: "\f65d ";
-    color: #f05133;
-}
-
-.ms-Icon--PullRequest:before {
-    content: "\F296 ";
-}
-
-.ms-Icon--Approved:before {
-    content: "\EC61 ";
-    color: rgb(var(--palette-accent2-dark, 16, 124, 16));
-}
-
-.ms-Icon--ApprovedWithSuggestions:before {
-    content: "\E930 ";
-    color: rgb(var(--palette-accent2-dark, 16, 124, 16));
-}
-
-// .ms-Icon--NoResponse:before {}
-.ms-Icon--Rejected:before {
-    content: "\EB90 ";
-    color: var(--component-status-error, rgba(205, 74, 69, 1))
-}
-
-.ms-Icon--WaitingForAuthor:before {
-    content: "\ECE4 ";
-    color: rgba(214, 127, 60, 1);
-}
-
-.vss-Persona-content {
-    border-radius: 50%;
-    margin-right: 4px;
-}
-
-.bolt-button {
-    &.bolt-icon-button {
-        border: 0;
-        background: transparent;
-        padding: 8px;
-        &:hover {
-            background-color: rgba(var(--palette-neutral-6, 239, 239, 239), 1);
-        }
+    @font-face {
+        font-style: normal;
+        font-weight: 400;
+        font-family: "AzureDevOpsMDL2Assets";
+        src: url("../assets/AzDevMDL2.woff") format('woff');
     }
-}
-
-.favorite-star {
-    color: rgba(0, 0, 0, .9);
-    color: var(--text-primary-color, rgba(0, 0, 0, .9));
-    &.active {
-        color: #ffbe00;
-    }
-}
-
-.fabric-icon {
-    align-self: center;
-    display: inline-flex;
-    font-family: "AzureDevOpsMDL2Assets";
-    -webkit-font-smoothing: antialiased;
-}
-
-.vss-Persona-content {
-    max-height: 20px;
-    max-width: 20px;
-    padding: 0;
-    top: 5px;
-    position: relative;
-}
-
-.repo {
-    background-color: #fff;
-    background-color: var(--background-color, #fff);
-    border: 0;
-    border-radius: 4px;
-    box-shadow: 0 3.2px 7.2px 0 var(--callout-shadow-color, rgba(0, 0, 0, .132)), 0 0.6px 1.8px 0 var(--callout-shadow-secondary-color, rgba(0, 0, 0, .108));
-    font-family: "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    font-weight: normal;
-    margin-bottom: 16px;
-    padding: 0;
-    &.no-branches {
-        opacity: .5;
-        &:hover {
-            opacity: 1;
-        }
-    }
+    
     a {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+        color: rgb(var(--palette-primary-shade-10, 0, 90, 158));
+    }
+    
+    .ms-Icons {
+        font-family: "AzureDevOpsMDL2Assets";
+        -webkit-font-smoothing: antialiased;
+        margin-right: 3px;
+        top: 2px;
+        position: relative;
+    }
+    
+    .ms-Icon--Branch:before {
+        content: "\ebc2 ";
+    }
+    
+    .ms-Icon--FavoriteStar:before {
+        content: "\e734 ";
+    }
+    
+    .ms-Icon--FavoriteStarFill:before {
+        content: "\e735 ";
+    }
+    
+    .ms-Icon--GitLogo:before {
+        content: "\f65d ";
+        color: #f05133;
+    }
+    
+    .ms-Icon--PullRequest:before {
+        content: "\F296 ";
+    }
+    
+    .ms-Icon--Approved:before {
+        content: "\EC61 ";
+        color: rgb(var(--palette-accent2-dark, 16, 124, 16));
+    }
+    
+    .ms-Icon--ApprovedWithSuggestions:before {
+        content: "\E930 ";
+        color: rgb(var(--palette-accent2-dark, 16, 124, 16));
+    }
+    
+    .ms-Icon--NoResponse:before {
+        content: "";
+    }
+    
+    .ms-Icon--Rejected:before {
+        content: "\EB90 ";
+        color: var(--component-status-error, rgba(205, 74, 69, 1))
+    }
+    
+    .ms-Icon--WaitingForAuthor:before {
+        content: "\ECE4 ";
+        color: rgba(214, 127, 60, 1);
+    }
+    
+    .vss-Persona-content {
+        border-radius: 50%;
+        margin-right: 4px;
+    }
+    
+    .bolt-button {
+        &.bolt-icon-button {
+            border: 0;
+            background: transparent;
+            padding: 8px;
+            &:hover {
+                background-color: rgba(var(--palette-neutral-6, 239, 239, 239), 1);
+            }
         }
     }
-    .header {
-        align-items: center;
-        display: flex;
-        font-weight: 600;
-        padding: 12px 16px;
-        .fav {
-            margin-left: auto;
+    
+    .favorite-star {
+        color: rgba(0, 0, 0, .9);
+        color: var(--text-primary-color, rgba(0, 0, 0, .9));
+        &.active {
+            color: #ffbe00;
+        }
+    }
+    
+    .fabric-icon {
+        align-self: center;
+        display: inline-flex;
+        font-family: "AzureDevOpsMDL2Assets";
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .vss-Persona-content {
+        max-height: 20px;
+        max-width: 20px;
+        padding: 0;
+        top: 5px;
+        position: relative;
+    }
+    
+    .repo {
+        background-color: #fff;
+        background-color: var(--background-color, #fff);
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 0 3.2px 7.2px 0 var(--callout-shadow-color, rgba(0, 0, 0, .132)), 0 0.6px 1.8px 0 var(--callout-shadow-secondary-color, rgba(0, 0, 0, .108));
+        font-family: "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 16px;
+        padding: 0;
+        &.no-branches {
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
         }
         a {
-            color: rgba(0, 0, 0, .9);
-            color: var(--text-primary-color, rgba(0, 0, 0, .9));
-        }
-    }
-    .badge {
-        border: solid 1px #ccc;
-        border-radius: 120px;
-        font-size: 12px;
-        font-weight: normal;
-        margin-left: 8px;
-        padding: 4px 8px;
-    }
-    .container {
-        display: flex;
-        border-top: solid 1px #eee;
-        border-top: solid 1px var(--component-grid-cell-bottom-border-color, #eee);
-        padding: 8px 16px;
-        .item-branch {
-            padding: 4px;
-            flex-basis: 50%;
-            &>div {
-                padding: 2px 0;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
             }
         }
-        .item-pullrequest {
-            align-items: flex-start;
+        .header {
+            align-items: center;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0;
-            &>div {
-                padding: 2px 0;
+            font-weight: 600;
+            padding: 12px 16px;
+            .fav {
+                margin-left: auto;
             }
-            .pr {
-                background: none;
+            a {
                 color: rgba(0, 0, 0, .9);
                 color: var(--text-primary-color, rgba(0, 0, 0, .9));
-                font-weight: normal;
-                margin: 0;
-                margin-right: 4px;
+            }
+        }
+        .badge {
+            background-color: rgba(0, 0, 0, .06);
+            background-color: var(--palette-black-alpha-6, rgba(0, 0, 0, .06));
+            // border: solid 1px #ccc;
+            border-radius: 120px;
+            font-size: 12px;
+            font-size: .6875rem;
+            font-weight: normal;
+            margin-left: 8px;
+            padding: 2px;
+            &>span {
+                margin: 0 0.5rem;
+                padding: 2px0;
+            }
+        }
+        .container {
+            display: flex;
+            border-top: solid 1px #eee;
+            border-top: solid 1px var(--component-grid-cell-bottom-border-color, #eee);
+            padding: 8px 16px;
+            .item-branch {
+                padding: 4px;
+                flex-basis: 50%;
+                &>div {
+                    padding: 1px 0;
+                }
+            }
+            .item-pullrequest {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 padding: 0;
-                text-decoration: underline;
-                &.new {
-                    padding: 4px;
-                    margin-right: 8px;
-                    background-color: rgba(var(--palette-neutral-6, 239, 239, 239), 1);
-                    padding: 8px 16px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    &:hover {
-                        background-color: rgba(0, 120, 212, 1);
-                        background-color: var(--communication-background, rgba(0, 120, 212, 1));
-                        color: #fff;
+                &>div {
+                    padding: 1px 0;
+                }
+                .pr {
+                    background: none;
+                    color: rgba(0, 0, 0, .9);
+                    color: var(--text-primary-color, rgba(0, 0, 0, .9));
+                    font-weight: normal;
+                    margin: 0;
+                    margin-right: 4px;
+                    padding: 0;
+                    text-decoration: underline;
+                    &.new {
+                        padding: 4px;
+                        margin-right: 8px;
+                        background-color: rgba(var(--palette-neutral-6, 239, 239, 239), 1);
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        font-weight: 600;
+                        &:hover {
+                            background-color: rgba(0, 120, 212, 1);
+                            background-color: var(--communication-background, rgba(0, 120, 212, 1));
+                            color: #fff;
+                        }
                     }
                 }
             }
         }
     }
-}

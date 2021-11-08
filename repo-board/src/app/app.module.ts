@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RepoComponent } from './repo.component';
+import { PrStatusPipe } from './pr-status.pipe';
 import { VotePipe } from './vote.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RepoComponent,
-    VotePipe
+    PrStatusPipe, VotePipe
   ],
   imports: [
     BrowserModule

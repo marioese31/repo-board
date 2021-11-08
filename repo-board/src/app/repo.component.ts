@@ -34,17 +34,6 @@ export class RepoComponent implements OnInit {
         return this.pullRequests.find(pr => pr.sourceRefName === `refs/heads/${branchName}`);
     }
 
-    getStatus(status: PullRequestStatus) {
-        switch (status) {
-            case PullRequestStatus.Abandoned: return "Abandoned";
-            case PullRequestStatus.Active: return "Active";
-            // case PullRequestStatus.All: return "All";
-            case PullRequestStatus.Completed: return "Completed";
-            // case PullRequestStatus.NotSet: return "NotSet";
-        }
-        return "";
-    }
-
     getUrlForBranch(branchName: string) {
         return `${this.gitRepository.webUrl}?version=GB${branchName}`;
     }

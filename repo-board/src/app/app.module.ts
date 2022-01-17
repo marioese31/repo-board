@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxsModule } from '@ngxs/store';
 
 import { AppComponent } from './app.component';
 import { RepoComponent } from './repo.component';
 import { PrStatusPipe } from './pr-status.pipe';
+import { RepoState } from './state/repo.state';
 import { VotePipe } from './vote.pipe';
 
 @NgModule({
@@ -13,7 +17,12 @@ import { VotePipe } from './vote.pipe';
     PrStatusPipe, VotePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    NgxsModule.forRoot([RepoState], {
+      developmentMode: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
